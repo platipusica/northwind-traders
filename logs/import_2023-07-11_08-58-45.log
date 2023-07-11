@@ -1,0 +1,242 @@
+THE METADATA HAVE BEEN SUCCESSFULLY IMPORTED
+
+
+Import: reading data
+
+Import: checking data integrity
+
+Import: analyzing changes
+
+Import: waiting for connections to close
+
+Import: applying changes to the database
+
+CREATE TABLE "Customers"
+(
+"ID" INTEGER PRIMARY KEY,
+"Company" TEXT,
+"Last_Name" TEXT,
+"First_Name" TEXT,
+"Email_Address" TEXT,
+"Job_Title" TEXT,
+"Business_Phone" TEXT,
+"Home_Phone" TEXT,
+"Mobile_Phone" TEXT,
+"Fax_Number" TEXT,
+"Address" TEXT,
+"City" TEXT,
+"State_Province" TEXT,
+"ZIP_Postal_Code" TEXT,
+"Country_Region" TEXT,
+"Web_Page" TEXT,
+"Notes" TEXT,
+"Attachments" TEXT)
+
+CREATE TABLE "Employees"
+(
+"ID" INTEGER PRIMARY KEY,
+"Company" TEXT,
+"Last_Name" TEXT,
+"First_Name" TEXT,
+"Email_Address" TEXT,
+"Job_Title" TEXT,
+"Business_Phone" TEXT,
+"Home_Phone" TEXT,
+"Mobile_Phone" TEXT,
+"Fax_Number" TEXT,
+"Address" TEXT,
+"City" TEXT,
+"State_Province" TEXT,
+"ZIP_Postal_Code" TEXT,
+"Country_Region" TEXT,
+"Web_Page" TEXT,
+"Notes" TEXT,
+"Attachments" TEXT)
+
+CREATE TABLE "Suppliers"
+(
+"ID" INTEGER PRIMARY KEY,
+"Company" TEXT,
+"Last_Name" TEXT,
+"First_Name" TEXT,
+"Email_Address" TEXT,
+"Job_Title" TEXT,
+"Business_Phone" TEXT,
+"Home_Phone" TEXT,
+"Mobile_Phone" TEXT,
+"Fax_Number" TEXT,
+"Address" TEXT,
+"City" TEXT,
+"State_Province" TEXT,
+"ZIP_Postal_Code" TEXT,
+"Country_Region" TEXT,
+"Web_Page" TEXT,
+"Notes" TEXT,
+"Attachments" TEXT)
+
+CREATE TABLE "Products"
+(
+"Supplier_IDs" TEXT,
+"ID" INTEGER PRIMARY KEY,
+"Product_Code" TEXT,
+"Product_Name" TEXT,
+"Description" TEXT,
+"Standard_Cost" REAL,
+"List_Price" REAL,
+"Reorder_Level" INTEGER,
+"Target_Level" INTEGER,
+"Quantity_Per_Unit" TEXT,
+"Discontinued" INTEGER,
+"Minimum_Reorder_Quantity" INTEGER,
+"Category" TEXT,
+"Attachments" TEXT)
+
+CREATE TABLE "Shippers"
+(
+"ID" INTEGER PRIMARY KEY,
+"Company" TEXT,
+"Last_Name" TEXT,
+"First_Name" TEXT,
+"Email_Address" TEXT,
+"Job_Title" TEXT,
+"Business_Phone" TEXT,
+"Home_Phone" TEXT,
+"Mobile_Phone" TEXT,
+"Fax_Number" TEXT,
+"Address" TEXT,
+"City" TEXT,
+"State_Province" TEXT,
+"ZIP_Postal_Code" TEXT,
+"Country_Region" TEXT,
+"Web_Page" TEXT,
+"Notes" TEXT,
+"Attachments" TEXT)
+
+CREATE TABLE "Orders"
+(
+"Order_ID" INTEGER PRIMARY KEY,
+"Employee_ID" INTEGER,
+"Customer_ID" INTEGER,
+"Order_Date" TEXT,
+"Shipped_Date" TEXT,
+"Shipper_ID" INTEGER,
+"Ship_Name" TEXT,
+"Ship_Address" TEXT,
+"Ship_City" TEXT,
+"Ship_State_Province" TEXT,
+"Ship_ZIP_Postal_Code" TEXT,
+"Ship_Country_Region" TEXT,
+"Shipping_Fee" REAL,
+"Taxes" REAL,
+"Payment_Type" INTEGER,
+"Paid_Date" TEXT,
+"Notes" TEXT,
+"Tax_Rate" REAL,
+"Tax_Status" INTEGER,
+"Status_ID" INTEGER)
+
+CREATE TABLE "Invoices"
+(
+"Invoice_ID" INTEGER PRIMARY KEY,
+"Order_ID" INTEGER,
+"Invoice_Date" TEXT,
+"Due_Date" TEXT,
+"Tax" REAL,
+"Shipping" REAL,
+"Amount_Due" REAL)
+
+CREATE TABLE "Inventory_Transactions"
+(
+"Transaction_ID" INTEGER PRIMARY KEY,
+"Transaction_Type" INTEGER,
+"Transaction_Created_Date" TEXT,
+"Transaction_Modified_Date" TEXT,
+"Product_ID" INTEGER,
+"Quantity" INTEGER,
+"Purchase_Order_ID" INTEGER,
+"Customer_Order_ID" INTEGER,
+"Comments" TEXT)
+
+CREATE TABLE "Inventory_Transaction_Types"
+(
+"ID" INTEGER,
+"Type_Name" TEXT,
+"ID_ROWID" INTEGER PRIMARY KEY)
+
+CREATE TABLE "Order_Details_Status"
+(
+"Status_ID" INTEGER,
+"Status_Name" TEXT,
+"ID_ROWID" INTEGER PRIMARY KEY)
+
+CREATE TABLE "Orders_Status"
+(
+"Status_ID" INTEGER,
+"Status_Name" TEXT,
+"ID_ROWID" INTEGER PRIMARY KEY)
+
+CREATE TABLE "Orders_Tax_Status"
+(
+"ID" INTEGER,
+"Tax_Status_Name" TEXT,
+"ID_ROWID" INTEGER PRIMARY KEY)
+
+CREATE TABLE "Purchase_Order_Status"
+(
+"Status_ID" INTEGER,
+"Status" TEXT,
+"ID_ROWID" INTEGER PRIMARY KEY)
+
+CREATE TABLE "Purchase_Orders"
+(
+"Purchase_Order_ID" INTEGER PRIMARY KEY,
+"Supplier_ID" INTEGER,
+"Created_By" INTEGER,
+"Submitted_Date" TEXT,
+"Creation_Date" TEXT,
+"Status_ID" INTEGER,
+"Expected_Date" TEXT,
+"Shipping_Fee" REAL,
+"Taxes" REAL,
+"Payment_Date" TEXT,
+"Payment_Amount" REAL,
+"Payment_Method" INTEGER,
+"Notes" TEXT,
+"Approved_By" INTEGER,
+"Approved_Date" TEXT,
+"Submitted_By" INTEGER)
+
+CREATE TABLE "Order_Details"
+(
+"ID" INTEGER PRIMARY KEY,
+"Order_ID" INTEGER,
+"Product_ID" INTEGER,
+"Quantity" REAL,
+"Unit_Price" REAL,
+"Discount" REAL,
+"Status_ID" INTEGER,
+"Date_Allocated" TEXT,
+"Purchase_Order_ID" INTEGER,
+"Inventory_ID" INTEGER,
+"TOTAL_PRICE" REAL)
+
+CREATE TABLE "Purchase_Order_Details"
+(
+"ID" INTEGER PRIMARY KEY,
+"Purchase_Order_ID" INTEGER,
+"Product_ID" INTEGER,
+"Quantity" REAL,
+"Unit_Cost" REAL,
+"Date_Received" TEXT,
+"Posted_To_Inventory" INTEGER,
+"Inventory_ID" INTEGER,
+"TOTAL_PRICE" REAL)
+
+CREATE  INDEX "NORTHWIND_TRADERS_SUPPLIERS_IDX" ON "Suppliers" ("Company" )
+CREATE  INDEX "NORTHWIND_TRADERS_PRODUCTS_SUPPLIERS_IDS_IDX" ON "Products" ("Supplier_IDs" )
+CREATE  INDEX "NORTHWIND_TRADERS_INVENTORY_TRANSACTIONS_IDX" ON "Inventory_Transactions" ("Product_ID" , "Transaction_Type" )
+CREATE  INDEX "NORTHWIND_TRADERS_PURCHASE_ORDER_DETAILS_IDX" ON "Purchase_Order_Details" ("Product_ID" , "Posted_To_Inventory" )
+CREATE  INDEX "NORTHWIND_TRADERS_ORDER_DETAILS_IDX" ON "Order_Details" ("Product_ID" , "Status_ID" )
+Import: applying changes to admin.sqlite
+
+Import: copying files
