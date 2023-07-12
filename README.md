@@ -2,8 +2,12 @@
 Northwind Traders MS Access Template v1 semi-automatically migrated to the Web with the help of Jam.py.
 
 Semi-automated means any Access database can be migrated to a modern SQLite3, and the Front End can be built automatically with the default look.
+
 All by no-code. 
-The Front End can be modified additionally with no-code as well, or with a minimum code for Buttons, etc.
+
+The Front End can be modified additionally with no-code as well, or with a minimum code for Buttons, Dashboards, Reports, etc.
+
+When the Authentication is enabled, use only “First Name” as Login name, with no password. This is due to using Access Employees migrated table, which has no passwords.
 
 More demo aplications on **PythonAnywhere**:
 
