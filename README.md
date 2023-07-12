@@ -1,20 +1,11 @@
 # northwind-traders
-Northwind Traders MS Access Template v1 semi-automatically migrated to the Web with the help of https://github.com/jam-py/jam-py.
+Northwind Traders MS Access Template v1, semi-automatically migrated to the Web with help of https://github.com/jam-py/jam-py.
 
-Semi-automated means any Access database can be migrated to a modern SQLite3, and the Front End can be built automatically. Then, one can move to any other supported database, by automatically loading the data from SQLite3 like this (in Task/Server Module):
+Semi-automated means any Access database can be migrated first to a modern SQLite3, all tables can be imported and the Front End can be built automatically. 
 
-```
-from jam.db.db_modules import SQLITE
-def on_created(task):
-    task.copy_database(SQLITE, 'northwind.sqlite3')
-```
+If migrating **FROM** Access Front End only, meaning the database is already MSSQL, all tables can be imported and the Front End can be built automatically.
 
-
-If migrating FROM Access Front End only, meaning the database is already MSSQL, all tables can be imported just like from SQLite3, and the Front End can be built automatically.
-
-The Front End can be modified additionally with no-code as well, or with a minimum code for Buttons, Dashboards, Reports, etc.
-
-When the Authentication is enabled for this App, use only “First Name” as Login name, with no password. This is due to using Access Employees migrated table, which has no passwords. The Login Form is defined in index.html, as well as all Front End elements.
+The Front End can be modified additionally with no-code as well, or with a minimum code for Buttons, Dashboards, Reports, etc. 
 
 
 More demo aplications on **PythonAnywhere**:
@@ -38,5 +29,8 @@ The App will run at: ``http://localhost:8080``
 
 Import the downloaded file on ``http://localhost:8080/builder.html`` Application Builder interface.
 Or, if downloaded this repo, just start the Application.
+
+When the Authentication is enabled for this App, use only “First Name” as Login name, with no password. This is due to using Access Employees migrated table, which has no passwords. The Login Form is defined in index.html, as well as all Front End elements.
+
 
 Enjoy
