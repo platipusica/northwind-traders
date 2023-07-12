@@ -1,7 +1,14 @@
 # northwind-traders
 Northwind Traders MS Access Template v1 semi-automatically migrated to the Web with the help of https://github.com/jam-py/jam-py.
 
-Semi-automated means any Access database can be migrated to a modern SQLite3, and the Front End can be built automatically. Then, one can move to any supported database by automatically loading the data from SQLite3.
+Semi-automated means any Access database can be migrated to a modern SQLite3, and the Front End can be built automatically. Then, one can move to any other supported database, by automatically loading the data from SQLite3 like this (in Task/Server Module):
+
+```
+from jam.db.db_modules import SQLITE
+def on_created(task):
+    task.copy_database(SQLITE, 'northwind.sqlite3')
+```
+
 
 If migrating FROM Access Front End only, meaning the database is already MSSQL, all tables can be imported just like from SQLite3, and the Front End can be built automatically.
 
