@@ -9,6 +9,14 @@ The Front End can be modified additionally with no-code as well, or with a minim
 
 The same method is valid for **ANY** supported database. Hence, moving an desktop Application to the Web, which is using the supported database, is now almost completely automated.
 
+MS Access "Home Page":
+
+![Access_home](https://github.com/platipusica/northwind-traders-web-app/assets/9026100/162d6404-3afd-4b24-a486-b487aa29a65e)
+
+Migrated to Web "Home Page":
+
+![Web_homepage](https://github.com/platipusica/northwind-traders-web-app/assets/9026100/aac894a8-c27b-4505-b3d4-237ba9a03935)
+
 
 More demo applications on **PythonAnywhere**:
 
