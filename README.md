@@ -3,7 +3,7 @@ Northwind Traders MS Access Template v1 semi-automatically migrated to the Web w
 
 Semi-automated means any Access database can be migrated to a modern SQLite3, and the Front End can be built automatically with the default look. If moving FROM Access Front End only, meaning the database is MSSQL, all tables can be imported just like from SQLite3, and the Front Enc can be built automatically.
 
-**All by no-code. **
+**All by no-code.**
 
 The Front End can be modified additionally with no-code as well, or with a minimum code for Buttons, Dashboards, Reports, etc.
 
