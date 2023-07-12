@@ -26,9 +26,9 @@ Then, install Jam.py, start the Application:
 ```
 python server.py
 ```
-The App will run at http://localhost:8080
+The App will run at **http://localhost:8080**
 
-Import the downloaded file on http://localhost:8080/builder.html Application Builder interface.
+Import the downloaded file on **http://localhost:8080/builder.html** Application Builder interface.
 Or, if downloaded this repo, just start the Application.
 
 Enjoy
