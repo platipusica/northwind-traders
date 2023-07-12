@@ -7,6 +7,8 @@ If migrating **FROM** Access Front End only, meaning the database is already MSS
 
 The Front End can be modified additionally with no-code as well, or with a minimum code for Buttons, Dashboards, Reports, etc. 
 
+The same method is valid for **ANY** supported database. Hence, moving an desktop Application to the Web, which is using the supported database, is now almost completely automated.
+
 
 More demo applications on **PythonAnywhere**:
 
