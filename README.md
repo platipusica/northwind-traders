@@ -1,4 +1,4 @@
-# northwind-traders
+# MS Access Northwind Traders Web Application
 Northwind Traders MS Access Template v1, semi-automatically migrated to the Web with help of https://github.com/jam-py/jam-py.
 
 Semi-automated means any Access database can be migrated first to a modern SQLite3, all tables can be imported and the Front End can be built automatically. 
