@@ -8,7 +8,7 @@ If migrating **FROM** Access Front End only, meaning the database is already MSS
 The Front End can be modified additionally with no-code as well, or with a minimum code for Buttons, Dashboards, Reports, etc. 
 
 
-More demo aplications on **PythonAnywhere**:
+More demo applications on **PythonAnywhere**:
 
 * SAP Theme Demo: https://jampyapp.pythonanywhere.com
 * Personal Account Ledger from MS Access template: https://msaccess.pythonanywhere.com
