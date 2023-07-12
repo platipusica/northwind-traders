@@ -22,14 +22,15 @@ How to run in *your* environment?
 ==================================
 
 Download this repo or visit the Web site (on the above right), for the latest Export file.
-Then, install Jam.py, start the Application:
+Then, install Jam.py, create new project and start the Application:
 
 ```
+jam-project.py
 python server.py
 ```
 The App will run at: ``http://localhost:8080``
 
-Import the downloaded file on ``http://localhost:8080/builder.html`` Application Builder interface.
+Import the downloaded Export file on ``http://localhost:8080/builder.html`` Application Builder interface.
 Or, if downloaded this repo, just start the Application.
 
 When the Authentication is enabled for this App, use only “First Name” as Login name, with no password. This is due to using Access Employees migrated table, which has no passwords. The Login Form is defined in index.html, as well as all Front End elements.
