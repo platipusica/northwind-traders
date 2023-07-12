@@ -7,7 +7,7 @@ All by no-code.
 
 The Front End can be modified additionally with no-code as well, or with a minimum code for Buttons, Dashboards, Reports, etc.
 
-When the Authentication is enabled, use only “First Name” as Login name, with no password. This is due to using Access Employees migrated table, which has no passwords.
+When the Authentication is enabled, use only “First Name” as Login name, with no password. This is due to using Access Employees migrated table, which has no passwords. The Login Form is defined in index.html, as weel as all Front End elements.
 
 More demo aplications on **PythonAnywhere**:
 
