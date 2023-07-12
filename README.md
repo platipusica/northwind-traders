@@ -1,8 +1,11 @@
 # northwind-traders
 Northwind Traders MS Access Template v1 semi-automatically migrated to the Web with the help of Jam.py.
 
-Make a stunning database apps for your business really fast, for **free**. 
-Demo aplications on **PythonAnywhere**:
+Semi-automated means any Access database can be migrated to a modern SQLite3, and the Front End can be built automatically with the default look.
+All by no-code. 
+The Front End can be modified additionally with no-code as well, or with a minimum code for Buttons, etc.
+
+More demo aplications on **PythonAnywhere**:
 
 * SAP Theme Demo: https://jampyapp.pythonanywhere.com
 * Personal Account Ledger from MS Access template: https://msaccess.pythonanywhere.com
@@ -13,12 +16,14 @@ Demo aplications on **PythonAnywhere**:
 How to run in *your* environment?
 ==================================
 
-Download this repo or visit the Web site for the latest Export file.
-Then, install Jam.py, and start the Application:
+Download this repo or visit the Web site (on the above right), for the latest Export file.
+Then, install Jam.py, start the Application:
 
 ```
 python server.py
 ```
-The App will run at http://localhost:8001
+The App will run at http://localhost:8080
 
+Import the downloaded file on http://localhost:8080/builder.html Application Buiilder interface.
 
+Enjoy
